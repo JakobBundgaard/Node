@@ -43,8 +43,10 @@ const numberTwo = "2.30";
 
 const num3 = Number(numberOne) + Number(numberTwo);
 
+
 console.log(num3);
 
+console.log(typeof (num3));
 // --------------------------------------
 
 
@@ -55,9 +57,9 @@ const anotherNumberOne = "1.10";
 const anotherNumberTwo = "2.30";
 
 const num4 = Number(anotherNumberOne) + Number(anotherNumberTwo);
-
 console.log(num4.toFixed(2));
 console.log(typeof (num4));
+
 // --------------------------------------
 // Exercise 5 - Decimals and average
 
@@ -66,11 +68,13 @@ const two = 45;
 const three = 98;
 
 
-const num5 = (10 + 45 + 98) / 3;
-
-console.log(num5.toFixed(5));
 // Show in the console the avg. with 5 decimals
 
+const num5 = (one + two + three) / 3;
+
+console.log(num5.toFixed(5));
+
+console.log(typeof (num5));
 
 
 
