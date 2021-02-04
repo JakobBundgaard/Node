@@ -26,11 +26,12 @@ console.log(jakob);
 
 const stackOverflow = {};
 
+// make a rule called isAllowed and let the value be true
+
 stackOverflow.isAllowed = true;
 
 console.log(stackOverflow);
 
-// make a rule called isAllowed and let the value be true
 
 // --------------------------------------
 // Exercise 4 - Remove a property 
