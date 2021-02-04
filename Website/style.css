@@ -49,4 +49,9 @@ body {
     padding: 5px;
   }
 
-  
+   .list_link {
+    color: #818181;
+  } 
+  .p1 {
+    margin-left: 17px;
+  }
