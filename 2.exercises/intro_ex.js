@@ -99,5 +99,4 @@ const fact = "You are learning javascript!";
 
 console.log(fact.replace("j", "J"));
 
-
 // --------------------------------------
