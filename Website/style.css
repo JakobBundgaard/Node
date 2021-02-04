@@ -1,5 +1,5 @@
 body {
-    background: #f06226;
+    background: #107dc5;
     color: #fff;
     font-family: "Arial", sans-serif;
     font-size: 14px;
@@ -7,5 +7,35 @@ body {
 
   header {
     text-align: center;
-    border-bottom: #fff dashed 1px;
+  }
+
+  #container {
+    width: 60%;
+    background: #142b36;
+    margin: 20px auto;
+    overflow: auto;
+    padding: 25px;
+  }
+
+  #sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  #sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
   }
