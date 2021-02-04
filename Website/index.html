@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NodeJS</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-</head>
+  </head>
 
-<body id="myBody">
+  <body id="myBody">
     <div id="main_container">
-        <div id="header_container">
-            <header>
-                <h1>My NodeJS Website</h1>
-            </header>
+      <div id="header_container">
+        <header>
+          <h1>My NodeJS Website</h1>
+          <p>New tag</p>
+        </header>
+      </div>
+      <div id="sidenav">
+        <div id="nav_search">
+          <a id="home" href="#">
+            <p>Home</p>
+          </a>
+          <div role="search">
+            <form id="search_form" action="search.html" method="get">
+              <input type="text" name="search" placeholder="Search site" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
         </div>
-        <div id="sidenav">
-            <div id="nav_search">
-                <a id="home" href="#">
-                    <p>Home</p>
-                </a>
-                <div role="search">
-                    <form id="search_form" action="search.html" method="get">
-                        <input type="text" name="search" placeholder="Search site">
-                        <input type="hidden" name="check_keywords" value="yes">
-                        <input type="hidden" name="area" value="default">
-                    </form>
-                </div>
-            </div>
-            <div>
-                <div class="week">
-                    <p class="p1">Week 1</p>
-                    <ul class="list_link">
-                        <li><a
-                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Strings</a>
-                        </li>
+        <div>
+          <div class="week">
+            <p class="p1">Week 1</p>
+            <ul class="list_link">
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+                  >Strings</a
+                >
+              </li>
 
-                        <li><a href="https://github.com/JakobBundgaard/Node/tree/main/2.exercises">Exercises at
-                                Github</a></li>
-                    </ul>
-                </div>
+              <li>
+                <a
+                  href="https://github.com/JakobBundgaard/Node/tree/main/2.exercises"
+                  >Exercises at Github</a
+                >
+              </li>
+            </ul>
+          </div>
 
-
-
-                <!-- <a href="#week2">Week 2</a>
+          <!-- <a href="#week2">Week 2</a>
                 <a href="#week3">Week 3</a>
                 <a href="#week4">Week 4</a>
                 <a href="#week5">Week 5</a>
@@ -67,11 +72,8 @@
                 <a href="#week21">Week 21</a>
                 <a href="#week22">Week 22</a>
                 <a href="#week23">Week 23</a> -->
-            </div>
-
         </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
