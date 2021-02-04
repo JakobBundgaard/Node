@@ -74,10 +74,13 @@ const lettersExpanded = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
+const everySecond = [];
+
 var letters2 = function (array) {
     for (i = 1; i <= array.length - 1; i += 2) {
-        console.log(array[i]);
+        everySecond.push(array[i])
     }
+    console.log(`Every second element of array: ${everySecond}`);
 }
 
 letters2(lettersExpanded);
@@ -91,7 +94,18 @@ const numbers = [5, 3, 2, 7, 11, 12, 0, -20, 6];
 
 const discardedNumbers = [];
 
+
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
+
+var numbers2 = function (array) {
+    for (i = 0; i <= array.length - 1; i++) {
+        if (array[i] > 6 || array[i] < 0) {
+            discardedNumbers.push(array[i]);
+        }
+    }
+    console.log(`Discarded numbers: ${discardedNumbers}`);
+}
+numbers2(numbers);
 
 // --------------------------------------
