@@ -42,7 +42,6 @@ const classes = [
 ];
 
 app.get("/students/classes", (req, res) => {
-    const id = 2;
     res.send({ "Classes": classes })
 })
 
