@@ -32,8 +32,8 @@ app.get("/students", (req, res) => {
 
 
 app.get("/students/id", (req, res) => {
-
-    res.send({ "student by id": student.name })
+    const id = 2;
+    res.send({ "Jakes id is: ": id })
 })
 
 app.listen(8080);
