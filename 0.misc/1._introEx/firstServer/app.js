@@ -30,10 +30,20 @@ app.get("/students", (req, res) => {
     res.send({ "Students": student })
 });
 
+const classes = [
+    {
+        name: "Node.js",
+        teacher: "Anders Latif"
+    },
+    {
+        name: "Python",
+        teacher: "Claus Boven"
+    }
+];
 
-app.get("/students/id", (req, res) => {
+app.get("/students/classes", (req, res) => {
     const id = 2;
-    res.send({ "Jakes id is: ": id })
+    res.send({ "Classes": classes })
 })
 
 app.listen(8080);
