@@ -18,7 +18,7 @@ const year = "2020";
 const number = 1;
 
 // Add the year plus the number
-// The result should be 2021 78
+// The result should be 2021 
 // You cannot touch line 1 or 2
 
 const thisYear = parseInt(year) + number;
