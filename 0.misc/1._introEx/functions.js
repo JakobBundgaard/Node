@@ -2,6 +2,8 @@ function myFirstFunction() {
     return "Hello";
 }
 
+
+
 const myVariableFunction = () => {
     console.log("Hello")
 };
@@ -9,16 +11,34 @@ const myVariableFunction = () => {
 // callback functions
 
 
-const sayHi = () => {
-    return console.log("Hi");
-}
 
-function sayHilater2(anyFunctionReference) {
+
+function sayHiLater(anyFunctionReference) {
     anyFunctionReference();
 }
 
-sayHiLater(sayHi());
+const sayHi = () => {
+    return console.log("Hi");
+};
+
+sayHiLater(sayHi);
 
 //hoisting 
 
+const sayHello = () => {
+    return console.log("Hello there")
+};
+
+sayHiLater(sayHello);
+
+function interact(genericInteraction, name) {
+    console.log(genericInteraction(name));
+}
+
+const poke = (name) => "Poke" + name;
+
+
+interact(poke, " Jake");
+
+interact((name) => "Hug " + name, "Napster");
 
