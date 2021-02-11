@@ -76,7 +76,7 @@ const lettersExpanded = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 const everySecond = [];
 
-var letters2 = function (array) {
+const letters2 = function (array) {
     for (i = 1; i <= array.length - 1; i += 2) {
         everySecond.push(array[i])
     }
