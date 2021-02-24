@@ -1,5 +1,5 @@
 const express = require("express");
-const app = express(); // app is theinitialized instanceof server
+const app = express(); // app is the initialized instance of server
 // console.log(express());
 
 app.get("/", (req, res) => {
