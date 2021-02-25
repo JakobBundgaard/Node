@@ -29,4 +29,6 @@ app.get("/days", (req, res) => {
     res.send({ day: weekdays[todaysWeekday] });
 });
 
+
+
 app.listen(8080);
