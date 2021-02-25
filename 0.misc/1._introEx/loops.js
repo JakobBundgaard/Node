@@ -12,3 +12,18 @@ const copiedFruits = fruits.map((fruit, index) => {
 });
 
 console.log(copiedFruits);
+
+const people = [
+    {
+        name: "Jakob Bundgaard",
+        age: 34
+    },
+    {
+        name: "Christian",
+        age: 34
+    },
+    {
+        name: "John",
+        age: 45
+    }
+];
