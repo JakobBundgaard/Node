@@ -1,34 +1,34 @@
 const express = require("express");
 const app = express();
 
-const students = [
+app.use(express.json());
+
+const albums = [
     {
-        name: "Jake",
-        id: 2
+        id: 1,
+        title: "Exercises In Futility"
     },
     {
-        name: "Shawn",
-        id: 3
-    }
+        id: 2,
+        title: "Death Atlas"
+    },
+    {
+        id: 3,
+        title: "Kaj & Andrea"
+    },
 ];
 
-app.get("/students", (req, res) => {
-    res.send({ "Students": students })
+app.get("/bands/albums/", (req, res) => {
+    res.send({ "Albums": albums });
 });
 
-const classes = [
-    {
-        name: "Node.js",
-        teacher: "Anders Latif"
-    },
-    {
-        name: "Python",
-        teacher: "Claus Boven"
+app.post("/bands/albums/", (req, res) => {
+    const album = {
+        id: albums.length + 1,
+        title: req.body.title
     }
-];
-
-app.get("/students/classes", (req, res) => {
-    res.send({ "Classes": classes })
-})
+    albums.push(album);
+    res.send({ body: req.body })
+});
 
 app.listen(8080);
