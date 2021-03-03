@@ -31,4 +31,22 @@ app.post("/bands/albums/", (req, res) => {
     res.send({ body: req.body })
 });
 
+app.put("/bands/albums/:id", (req, res) => {
+    const album = albums.find(a => a.id === parseInt(req.params.id));
+    if (!album) return res.status(404).send("The album with given id was not found");
+
+    album.title = req.body.title;
+    res.send(album);
+})
+
+app.delete("/bands/albums/:id", (req, res) => {
+    const album = albums.find(a => a.id === parseInt(req.params.id));
+    if (!album) return res.status(404).send("The album with given id was not found");
+
+    const index = albums.indexOf(album);
+    albums.splice(index, 1);
+
+    res.send(album);
+});
+
 app.listen(8080);
