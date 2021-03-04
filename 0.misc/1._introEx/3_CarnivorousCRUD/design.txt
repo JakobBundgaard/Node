@@ -1,0 +1,18 @@
+// the order of CRUD requests
+
+
+GET
+/plants
+/plants/id
+
+POST
+/plants
+
+
+PATCH // 
+/plants/id
+
+DELETE
+/plants/id
+
+// Create a server that 
