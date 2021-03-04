@@ -1,7 +1,17 @@
 const express = require('express');
+
+const cat = require("./cat.json");
+
 const app = express();
 
 app.use(express.json());
+
+console.log(cat)
+
+app.get("/cat", (req, res) => {
+    res.send({ cat });
+})
+
 
 app.get("/querystring", (req, res) => {
     console.log(req.query);

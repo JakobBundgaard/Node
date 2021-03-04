@@ -49,4 +49,12 @@ app.delete("/bands/albums/:id", (req, res) => {
     res.send(album);
 });
 
-app.listen(8080);
+const port = 8080;
+app.listen(port, (error) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log(`Connection established on port ${port}`);
+    }
+
+});
