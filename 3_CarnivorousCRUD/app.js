@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+const port = process.env.PORT || 8080;
+
+
 app.use(express.json());
 
 let plants = [
@@ -18,27 +21,42 @@ let plants = [
     },
 ]
 
+let id = plants.length;
+
 app.get("/plants", (req, res) => {
     res.send({ "These plants will eat you!": plants });
 });
 
 app.get("/plants/:id", (req, res) => {
     let plant = plants.find(plant => plant.id === parseInt(req.params.id));
-    if (!plants) return res.status(404).send("The plant with given id was not found");
 
     res.send(plant);
 });
 
 app.post("/plants", (req, res) => {
-    const plant = {
-        id: plants.length + 1,
-        name: req.body.name
-    }
-    plants.push(plant);
-    res.send({ body: req.body })
+    const newPlant = req.body;
+    newPlant.id = id++;
+    plants.push(newPlant);
+    res.send({ data: newPlant })
 });
 
-const port = 8080;
+app.delete("/plants/:id", (req, res) => {
+    plants = plants.filter(plant => plant.id !== Number(req.params.id));
+    res.send({});
+})
+
+app.patch("/plants/:id", (req, res) => {
+    let plantUpdated = false;
+    plants = plants.map(plant => {
+        if (plant.id === Number(req.params.id)) {
+            plantUpdated = true;
+            return { ...plant, ...req.body, id: plant.id };
+        }
+        return plant;
+    });
+    res.send({ data: plantUpdated })
+})
+
 app.listen(port, (error) => {
     if (error) {
         console.log(error)
