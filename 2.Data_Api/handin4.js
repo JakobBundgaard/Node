@@ -37,7 +37,7 @@ app.put("/bands/albums/:id", (req, res) => {
 
     album.title = req.body.title;
     res.send(album);
-})
+});
 
 app.delete("/bands/albums/:id", (req, res) => {
     const album = albums.find(a => a.id === parseInt(req.params.id));

@@ -23,7 +23,7 @@ app.get("/plants", (req, res) => {
 });
 
 app.get("/plants/:id", (req, res) => {
-    let plant = plants.find(p => p.id === parseInt(req.params.id));
+    let plant = plants.find(plant => plant.id === parseInt(req.params.id));
     if (!plants) return res.status(404).send("The plant with given id was not found");
 
     res.send(plant);
