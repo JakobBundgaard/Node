@@ -27,6 +27,10 @@ app.get("/week5", (req, res) => {
     res.sendFile(__dirname + "/public/week5.html")
 });
 
+app.get("/week6", (req, res) => {
+    res.sendFile(__dirname + "/public/week6.html")
+})
+
 
 
 app.listen(port, (error) => {

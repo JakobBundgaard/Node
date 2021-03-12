@@ -5,10 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Node.JS</title>
-  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <!-- <script type="text/javascript" src="../scripts/script.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="/../style.css">
+  <style>
+    body {
+      background-color: rgb(9, 174, 224);
+    }
+
+    .collapsible {
+      background-color: #777;
+      color: black;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #555;
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: black;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #d4caca;
+    }
+  </style>
 </head>
 
-<body>
+<body style="margin: auto; width: 50%;">
 
   <header>
     <h1>Learning Node.JS</h1>
@@ -16,34 +58,105 @@
     <br>
     <br>
   </header>
-  <div>
-    <div class="week">
-      <a href="/week1">Week 1</a>
-      <br>
-      <br>
-    </div>
-    <div class="week">
-      <a href="/week2">Week 2</a>
-      <br>
-      <br>
-    </div>
-    <div class="week">
-      <a href="/week3">Week 3</a>
-      <br>
-      <br>
-    </div>
-    <div class="week">
-      <a href="/week4">Week 4</a>
-      <br>
-      <br>
-    </div>
-    <div class="week">
-      <a href="/week5">Week 5</a>
-      <br>
-      <br>
-    </div>
 
+  <button type="button" class="collapsible">Week 1</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Intro to Node.JS</li>
+      <li>Intro exercises </li>
+    </ul>
+    <a href="/week1">Week 1</a>
+    <br>
+    <br>
   </div>
+  <br>
+  <br>
+  <button type="button" class="collapsible">Week 2</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Functions (callback functions)</li>
+      <li>HTTP Methods, REST APIs</li>
+    </ul>
+    <a href="/week2">Week 2</a>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <button type="button" class="collapsible">Week 3</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Variables, Scopes, Type Coercion, Strict mode</li>
+      <li>Node-modules and NPM</li>
+      <li>Using express and nodemon</li>
+    </ul>
+    <a href="/week3">Week 3</a>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <button type="button" class="collapsible">Week 4</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Sending data in the response in various ways</li>
+      <li>Loops</li>
+    </ul>
+    <a href="/week4">Week 4</a>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <button type="button" class="collapsible">Week 5</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Serving HTML files with Express</li>
+    </ul>
+    <a href="/week5">Week 5</a>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <button type="button" class="collapsible">Week 6</button>
+  <div class="content">
+    <h3>Topics</h3>
+    <ul>
+      <li>Serving HTML files with Express</li>
+    </ul>
+    <a href="/week6">Week 6</a>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+
+
 </body>
 
 </html>
