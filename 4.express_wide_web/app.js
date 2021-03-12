@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
 
-    res.sendFile(__dirname + "/public/index.html")
+    res.sendFile(__dirname + "\public\index.html")
 });
 
 app.get("/dragons", (req, res) => {
